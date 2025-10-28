@@ -1,14 +1,14 @@
 /*================================
-   CSS ێ تاریک و پرۆفێشناڵ (Dark Theme Pro)
+   CSS ێ تاریک و پرۆفێشناڵ (Dark Theme Pro) - گونجای بۆ دکتۆر AI
 =================================*/
-@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap'); 
 
 :root {
-    --primary-bg: #1c1c1c; /* رەنگێ ڕەشێ سەرەکی */
-    --secondary-bg: #282828; /* ڕەشێ هێدی */
-    --accent-color: #00ff6a; /* سەوزێ روون بۆ سەرنجڕاکێشانێ */
+    --primary-bg: #1a237e; /* شینێ تاریکێ زانستی */
+    --secondary-bg: #283593; /* شینەکێ کێمتر تاریک */
+    --accent-color: #00ffaa; /* سەوزێ روونێ پزیشکی/تەکنۆلۆژی */
     --text-light: #ffffff;
-    --text-dark: #b8b8b8;
+    --text-dark: #e0e0e0;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 
 /* Header و Navigation */
 header {
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
     padding: 15px 50px;
     border-bottom: 2px solid var(--accent-color);
     position: fixed;
@@ -32,6 +32,7 @@ header {
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -91,6 +92,13 @@ nav ul li a:hover {
     color: var(--text-light);
 }
 
+.hero-content h1::before {
+    content: "دکتۆر AI | "; 
+    color: var(--accent-color);
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
 .hero-content p {
     font-size: 1.1em;
     color: var(--text-dark);
@@ -100,8 +108,9 @@ nav ul li a:hover {
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border-radius: 50%; /* شێوازێ وێنەیێ خولکی */
+    border-radius: 50%; 
     border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.5); /* درەوشانەوەی سەوز */
 }
 
 /* تەکمە (Button) */
@@ -109,17 +118,17 @@ nav ul li a:hover {
     display: inline-block;
     background: var(--accent-color);
     color: var(--primary-bg);
-    padding: 10px 25px;
+    padding: 12px 30px;
     margin-top: 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background: #00d95d; /* سەوزەکێ کێمتر رون */
-    color: var(--primary-bg);
+    background: #00d95d; 
+    transform: translateY(-2px);
 }
 
 .btn-small {
@@ -129,19 +138,30 @@ nav ul li a:hover {
     padding: 5px 15px;
     border-radius: 3px;
     font-size: 0.9em;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* بەشێ ل سەر من (About Section) */
-.about-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.btn-small:hover {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* بەشێن سەرەکی (Sections) */
+section {
     padding: 80px 50px;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 50px;
+}
+
+.about-section {
     background: var(--secondary-bg);
     border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .about-image img {
@@ -150,6 +170,7 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 10px;
     border: 3px solid var(--text-dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .section-title {
@@ -168,7 +189,6 @@ nav ul li a:hover {
 /* بەشێ شیانان (Services/Skills) */
 .services-section {
     text-align: center;
-    padding: 80px 50px;
 }
 
 .services-grid {
@@ -182,13 +202,14 @@ nav ul li a:hover {
     background: var(--secondary-bg);
     padding: 30px;
     border-radius: 10px;
-    border-bottom: 5px solid var(--accent-color);
+    border-left: 5px solid var(--accent-color);
     transition: transform 0.3s ease, background 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    background: #333;
+    transform: translateY(-5px);
+    background: #39439c; /* تۆخکرن */
 }
 
 .service-card .icon {
@@ -207,16 +228,47 @@ nav ul li a:hover {
     color: var(--text-dark);
 }
 
+/* بەشێن کار و پرۆژە */
+.job-item {
+    background: var(--primary-bg);
+    border: 1px solid var(--secondary-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-right: 5px solid var(--accent-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.job-item h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* تابلۆی پەیوەندی */
+#contact table {
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#contact table th, #contact table td {
+    background-color: var(--primary-bg);
+    border: 1px solid var(--secondary-bg);
+    color: var(--text-dark);
+    text-align: right;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
     color: var(--text-dark);
     margin-top: 40px;
     font-size: 0.9em;
+    border-top: 3px solid var(--accent-color);
 }
-
 
 /* Media Queries */
 @media (max-width: 900px) {
@@ -230,19 +282,12 @@ footer {
         order: -1;
     }
     nav ul {
-        display: none; /* نەڤ ل سەر مۆبایلێ تێ ڤەشارتن */
+        display: none; 
     }
     header {
         padding: 15px 20px;
     }
-}
-
-@media (max-width: 500px) {
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    .hero-image img {
-        width: 250px;
-        height: 250px;
+    #contact table {
+        width: 100%;
     }
 }
