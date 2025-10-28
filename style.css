@@ -1,253 +1,115 @@
-/*================================
-   CSS ێ سپی و پاک (Minimal/Clean White Theme) - وەک وێنەی کۆتایی
-=================================*/
+<!DOCTYPE html>
+<html lang="ku-behdini" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پۆرتفۆلیۆیێ دکتۆر AI | Mohammed Brindar Pro Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* داخستن و بکارھێنانی فۆنتی Ruwudu لە Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap'); 
+    <header id="header-top">
+        <nav>
+            <div class="logo">Dr. AI | M.B.</div>
+            <ul>
+                <li><a href="#home">سەرەتا</a></li>
+                <li><a href="#pêşekî">ل سەر من</a></li>
+                <li><a href="#prôje">پرۆژە</a></li>
+                <li><a href="#contact">پەیوەندی</a></li>
+            </ul>
+        </nav>
+    </header>
 
-:root {
-    --primary-bg: #ffffff;      /* سپی زۆر پاک بۆ بەشێن سەرەکی */
-    --secondary-bg: #f5f5f5;    /* خولکی زۆر رۆن بۆ پاشخان */
-    --accent-color: #333333;    /* ڕەشێ تاریک بۆ دەقێ سەرەکی */
-    --link-color: #007bff;      /* شینی سەرەکی بۆ گرنگی */
-    --deep-teal: #00796b;       /* رەنگی تایبەتی 'دکتۆر AI' بۆ جەختکردنەوە */
-    --text-color: #555555;      /* ڕەشێ کێمتر تاریک بۆ دەق */
-    --border-color: #e6e6e6;    /* سنوورێن زۆر هێمن */
-    --card-shadow: none;        /* لابردنی سێبەرەکان بۆ پاکی */
-    --border-radius: 0;         /* لابردنی خولکاندن بۆ سادەیی */
-}
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h4 class="sub-title">داهێنەرێ تەندروستیێ و زیرەکیا دەستکرد</h4>
+            <h1>دکتۆر AI | Mohammed Brindar</h1>
+            <p>ب یەکڤەکرنا قوتابخانا پەرستاریێ و شارەزاییا تەکنۆلۆژیا پێشکەفتی، کار ل سەر گەشەپێدانا چارەسەریێن دیجیتاڵی د بوارێ ساخلەمیێ دا دکەم.</p>
+            <a href="#prôje" class="btn">پرۆژەیێن AI ببینە</a>
+        </div>
+        <div class="hero-image">
+            <img src="Gemini_Generated_Image_3cord03cord03cor.jpg" alt="Mohammed Brindar - Doctor AI">
+        </div>
+    </section>
 
-body {
-    font-family: 'Ruwudu', Tahoma, sans-serif; 
-    background-color: var(--secondary-bg); 
-    color: var(--text-color);
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    direction: rtl; 
-    text-align: right;
-}
+    <section id="pêşekî" class="about-section">
+        <div class="about-image">
+            <img src="Gemini_Generated_Image_3cord03cord03cor.jpg" alt="Mohammed Brindar - IT Expert">
+        </div>
+        <div class="about-content">
+            <h2 class="section-title">شارەزایێ تەکنۆلۆژی و پەرستاری</h2>
+            <p>ئەز ڤیانەکا مەزن بۆ یەکڤەکرنا زانستێن تەندروستیێ و تێکنۆلۆژیایێ هەیە. من شیانێن باش هەنە د بوارێ **AI** و **گەشەپێدانا وێبسایتان** دا بۆ خزمەتا بوارێ پەروەردەیی و تەندروستی. ئەزموونا کارێ من د گەل **MOH COMPANY** دا شیانێن من یێن کارگێڕی و پرۆفێشناڵی پێشخستینە.</p>
+            <a href="#shiyan" class="btn">پتر فێرببە ل سەر شیانان</a>
+        </div>
+    </section>
 
-/* Header و Navigation */
-header {
-    background: var(--primary-bg);
-    padding: 15px 50px;
-    border-bottom: 1px solid var(--border-color); /* سنوورێکی تەنک */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: none;
-}
+    <section id="shiyan" class="services-section">
+        <h2 class="section-title">شیانێن من و شارەزایی</h2>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <div class="icon">💻</div>
+                <h3>شارەزایێ AI و IT</h3>
+                <p>شیانێن بکارئینانا زیرەکیا دەستکرد و بەرنامەیێن کۆمپیوتەرێ ب شێوازەکێ پرۆفێشناڵی، دگەل گەشەپێدانا وێبسایتان.</p>
+            </div>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+            <div class="service-card">
+                <div class="icon">🚑</div>
+                <h3>زانینێن پەرستاریێ</h3>
+                <p>قوتابیێ بەشێ پەرستاریێ، ب زانینێن سەرەکی د بوارێ چاڤدێریا ساخلەمیێ و چاڤدێریا نەخۆشان دا.</p>
+            </div>
 
-.logo {
-    color: var(--deep-teal); 
-    font-size: 1.7em;
-    font-weight: 700;
-}
+            <div class="service-card">
+                <div class="icon">🌐</div>
+                <h3>زمان (هەموو باش)</h3>
+                <p>شارەزاییەکا تەمام د زمانێن کوردی (دایکێ)، ئینگلیزی، و عەرەبی دا بۆ پەیوەندیکرنەکا کاریگەر.</p>
+            </div>
 
-nav ul li a {
-    color: var(--text-color);
-    transition: color 0.3s;
-}
+        </div>
+    </section>
+    
+    <section id="prôje" class="about-section">
+        <h2 class="section-title">پرۆژە و ئەزموونێن سەرەکی</h2>
+        
+        <div class="job-item">
+            <h3>پرۆژەیێ ئاگەهداریا تەندروستی (Health Awareness Project)</h3>
+            <p>**بوار:** تەندروستی (Health) / AI | **تەکنۆلۆژی:** زیرەکیا دەستکرد، [ناڤێ زمانێ بەرنامەسازیێ]</p>
+            <p>دروستکرنا وێبسایتی یان ئاپی ب بکارئینانا AI بۆ دابینکرنا زانیاریێن دروست و گۆنجای بۆ خەلکی ل سەر بابەتێن تەندروستی.</p>
+            <a href="#" class="btn-small">لینکێ پرۆژەی</a>
+        </div>
+        
+        <div class="job-item">
+            <h3>پلاتفۆرمێ فێرکاریێ (Educational Platform)</h3>
+            <p>**بوار:** پەروەردەیی (Educational) / IT | **تەکنۆلۆژی:** HTML/CSS، [بەرنامەیێن دی]</p>
+            <p>گەشەپێدانا پلاتفۆرمەکا دیجیتاڵی بۆ هاریکاریکرنا قوتابیان د فێربوونا وان دا ب رێکا تێکنۆلۆژیایێ.</p>
+            <a href="#" class="btn-small">لینکێ پرۆژەی</a>
+        </div>
 
-nav ul li a:hover {
-    color: var(--deep-teal);
-    border-bottom: none;
-}
+        <div class="job-item">
+            <h3>ئەزموونا کارکرنێ ل MOH COMPANY</h3>
+            <p>**پۆست:** [پۆستێ خوە ل ڤێرێ بنڤیسە] | **ماوە:** [ژ هەیڤا... سالا... هەتا هەیڤا... سالا...]</p>
+            <p>تایبەتکرنا سەرکەفتنێن تە ل کۆمپانیایێ، ب تایبەتی ل سەر بوارێ تەکنۆلۆژی و کارگێڕی.</p>
+        </div>
 
-/* بەشێ سەرەتا (Hero Section) */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 150px 50px 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 70px;
-}
+    </section>
+    
+    <section id="contact" class="about-section">
+        <h2 class="section-title">پەیوەندی و زانیاریێن کەسی</h2>
+        <table>
+            <tr><th>ناڤ و پاشناڤ</th><td>Mohammed Brindar</td></tr>
+            <tr><th>ئیمەیل</th><td>mohammadbrindar47@gmail.com</td></tr>
+            <tr><th>ژمارەیا تەلەفۆنێ</th><td>750 855 4005</td></tr>
+            <tr><th>لینک</th><td><a href="https://web.facebook.com/mohammad.brindar.9" target="_blank">فەیسبووک</a></td></tr>
+        </table>
+    </section>
+    
+    <div class="extra-image-container">
+        <img src="Gemini_Generated_Image_3cord03cord03cor.jpg" alt="Mohammed Brindar - Footer Image">
+    </div>
 
-.hero-content h4 {
-    color: var(--deep-teal); 
-    font-weight: 500;
-    font-size: 1.2em;
-}
+    <footer>
+        <p>&copy; 2025 دکتۆر AI | Mohammed Brindar. هەمی ماف پاراستی یە.</p>
+    </footer>
 
-.hero-content h1 {
-    font-size: 4em; 
-    color: var(--accent-color);
-}
-
-.hero-content h1::before {
-    content: "دکتۆر AI | "; 
-    color: var(--deep-teal); 
-    font-weight: 700;
-}
-
-.hero-image img {
-    width: 380px; 
-    height: 380px;
-    border-radius: 50%; /* پاراستنی خولکاندنی وێنەی پرۆفایل */
-    border: 5px solid var(--border-color); /* سنووری زۆر هێمن */
-    outline: none; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* سێبەری زۆر هێمن */
-}
-
-/* تەکمە (Button) */
-.btn {
-    background: var(--deep-teal); 
-    color: var(--primary-bg);
-    padding: 14px 35px;
-    border-radius: 5px; /* خولکاندنی کەم */
-    font-weight: 700;
-    transition: background 0.3s;
-    box-shadow: none;
-    border: 1px solid var(--deep-teal);
-}
-
-.btn:hover {
-    background: #009688; /* رەنگێکی کەمێک کاڵتر */
-    color: var(--primary-bg);
-    transform: none;
-    box-shadow: none;
-}
-
-.btn-small {
-    background: none;
-    color: var(--deep-teal);
-    border: 1px solid var(--deep-teal);
-    border-radius: 5px;
-}
-.btn-small:hover {
-    background: var(--deep-teal);
-    color: var(--primary-bg);
-}
-
-
-/* بەشێن سەرەکی (Sections) و About */
-section {
-    padding: 60px 50px;
-    max-width: 1200px;
-    margin: 30px auto; 
-    background: var(--primary-bg);
-    border-radius: 0; 
-    box-shadow: none;
-    border: 1px solid var(--border-color); /* سنووری زۆر هێمن */
-}
-
-.about-section {
-    padding: 0; 
-}
-
-.about-image img {
-    border-radius: 0; 
-    border: 1px solid var(--border-color);
-    box-shadow: none;
-}
-
-.section-title {
-    color: var(--accent-color);
-    font-size: 2.2em;
-    position: relative;
-    padding-bottom: 15px;
-}
-.section-title::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50px; /* هێڵێکی کورت */
-    height: 3px;
-    background-color: var(--deep-teal); 
-    border-radius: 0;
-}
-
-
-/* بەشێ شیانان (Services/Skills) - وەک کارد */
-.services-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.service-card {
-    background: var(--primary-bg);
-    padding: 30px;
-    border-radius: 0;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease;
-    box-shadow: none;
-    border-right: none; 
-}
-
-.service-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* سێبەرێکی کەمتر لەسەر ھۆڤەر */
-}
-
-.service-card .icon {
-    font-size: 2.5em; 
-    color: var(--deep-teal);
-    margin-bottom: 15px;
-}
-
-/* بەشێن کار و پرۆژە */
-.job-item {
-    background: var(--secondary-bg); 
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 0;
-    margin-bottom: 20px;
-    border-left: 3px solid var(--deep-teal); /* هێڵی ڕەق و تەنک */
-    box-shadow: none;
-}
-.job-item h3 {
-    color: var(--deep-teal);
-}
-
-
-/* تابلۆی پەیوەندی */
-#contact table {
-    width: 70%;
-    border-radius: 0;
-    border: 1px solid var(--border-color);
-    box-shadow: none;
-}
-
-#contact table th, #contact table td {
-    background-color: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    padding: 15px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: var(--accent-color);
-    color: var(--primary-bg);
-    margin-top: 0; 
-    border-top: 5px solid var(--deep-teal);
-}
-
-/* Media Queries */
-@media (max-width: 900px) {
-    /* گۆڕانکاری بۆ مۆبایل */
-    .hero-section {
-        padding: 100px 20px 50px;
-    }
-    .hero-image img {
-        width: 250px; 
-        height: 250px;
-    }
-    .hero-content h1 {
-        font-size: 3em;
-    }
-}
+</body>
+</html>
