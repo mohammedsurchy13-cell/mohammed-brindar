@@ -1,183 +1,248 @@
 /*================================
-   CSS ێ پرۆفێشناڵی ژبۆ دیزاینەکێ جوان (Incredible Design)
+   CSS ێ تاریک و پرۆفێشناڵ (Dark Theme Pro)
 =================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #007bff; /* شینێ سەرەکی */
-    --secondary-color: #28a745; /* سەوز بۆ گرنگیێ */
-    --text-color: #343a40;
-    --bg-light: #f8f9fa;
-    --card-bg: #ffffff;
+    --primary-bg: #1c1c1c; /* رەنگێ ڕەشێ سەرەکی */
+    --secondary-bg: #282828; /* ڕەشێ هێدی */
+    --accent-color: #00ff6a; /* سەوزێ روون بۆ سەرنجڕاکێشانێ */
+    --text-light: #ffffff;
+    --text-dark: #b8b8b8;
 }
 
 body {
     font-family: 'Ruwudu', Tahoma, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-color);
-    line-height: 1.7;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     direction: rtl; 
     text-align: right;
 }
 
-/* سەرێ پەرەی (Header) */
+/* Header و Navigation */
 header {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    border-bottom: 8px solid var(--secondary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin: 0 0 5px;
-    font-size: 3em;
-    letter-spacing: 1.5px;
-}
-
-header p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-/* بەشێن سەرەکی (Sections) - کارتێن جوانی */
-section {
-    padding: 30px;
-    margin: 30px auto;
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    max-width: 950px;
-    transition: transform 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-3px); 
-}
-
-section h2 {
-    color: var(--primary-color);
-    border-bottom: 3px solid #dee2e6;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    font-size: 1.8em;
-    position: relative;
-}
-
-section h2::after {
-    content: '★'; 
-    position: absolute;
-    bottom: -10px;
-    right: 0;
-    color: var(--secondary-color);
-    font-size: 1.2em;
-}
-
-/* رێکخستنا تابلۆیان */
-table {
+    background: var(--secondary-bg);
+    padding: 15px 50px;
+    border-bottom: 2px solid var(--accent-color);
+    position: fixed;
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 8px;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
-table th, table td {
-    padding: 12px;
-    border: none;
-    text-align: right;
-    font-size: 1.05em;
-}
-
-table tr {
-    background-color: var(--bg-light);
-    border-radius: 5px;
-}
-
-table th {
-    background-color: #e9ecef;
-    color: var(--text-color);
-    font-weight: 600;
-    width: 30%;
-}
-
-/* دیزاینا ئەزموون و پرۆژەیان (Cards) */
-.job-item, .project-item {
-    background: #f0f0ff; 
-    padding: 18px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--secondary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.job-item h3, .project-item h3 {
-    color: var(--primary-color);
-    margin-top: 0;
-    font-size: 1.4em;
-}
-
-.job-item ul, .project-item ul {
-    list-style-type: '» ';
-}
-
-/* شیانان (Skills) */
-.skills-container {
+nav {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.skills-container > div {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid var(--primary-color);
+.logo {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* بەشێ سەرەتا (Hero Section) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 50px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.hero-content h4 {
+    color: var(--accent-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin: 0 0 20px;
+    color: var(--text-light);
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%; /* شێوازێ وێنەیێ خولکی */
+    border: 5px solid var(--accent-color);
+}
+
+/* تەکمە (Button) */
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 10px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #00d95d; /* سەوزەکێ کێمتر رون */
+    color: var(--primary-bg);
+}
+
+.btn-small {
+    background: none;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* بەشێ ل سەر من (About Section) */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    background: var(--secondary-bg);
     border-radius: 10px;
-    background-color: #f7faff;
 }
 
-.skills-container h3 {
-    color: var(--secondary-color);
-    border-bottom: 1px dashed #ccc;
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--text-dark);
+}
+
+.section-title {
+    color: var(--accent-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--text-dark);
     padding-bottom: 10px;
 }
 
-/* لینکان */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+.about-content p {
+    color: var(--text-dark);
+    font-size: 1.1em;
 }
 
-a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+/* بەشێ شیانان (Services/Skills) */
+.services-section {
+    text-align: center;
+    padding: 80px 50px;
 }
 
-/* ژێر پەرەی (Footer) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: #333;
+}
+
+.service-card .icon {
+    font-size: 2em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--text-light);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-dark);
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background: var(--text-color);
-    color: #fff;
+    padding: 20px;
+    background: var(--secondary-bg);
+    color: var(--text-dark);
     margin-top: 40px;
     font-size: 0.9em;
 }
 
-/* Media Queries (بۆ گونجاندن ل سەر مۆبایلێ) */
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column; 
-    }
 
-    section {
-        margin: 20px 10px;
-        padding: 15px;
+/* Media Queries */
+@media (max-width: 900px) {
+    .hero-section, .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 50px;
     }
+    .hero-image, .about-image {
+        margin-top: 30px;
+        order: -1;
+    }
+    nav ul {
+        display: none; /* نەڤ ل سەر مۆبایلێ تێ ڤەشارتن */
+    }
+    header {
+        padding: 15px 20px;
+    }
+}
 
-    header h1 {
-        font-size: 2em;
+@media (max-width: 500px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-image img {
+        width: 250px;
+        height: 250px;
     }
 }
