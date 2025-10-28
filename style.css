@@ -1,31 +1,22 @@
 /*================================
-   ناساندن و بکارھێنانی فۆنتی NRTKurdish
+   CSS ێ سپی و پاک (Minimal/Clean White Theme) - ب فۆنتی Ruwudu
 =================================*/
-@font-face {
-    font-family: 'NRTKurdish'; 
-    /* هەوڵدان بۆ دۆزینەوەی فۆنتەکە بە ڕێگای ڕاستەوخۆ */
-    src: url('NRT-Reg.ttf') format('truetype'),
-         url('./NRT-Reg.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-}
 
-/*================================
-   CSS ێ سپی و پاک (Minimal/Clean White Theme) - ب فۆنتی NRT
-=================================*/
+/* داخستن و بکارھێنانی فۆنتی Ruwudu لە Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;700&display=swap'); 
 
 :root {
-    --primary-bg: #ffffff; 
-    --secondary-bg: #f8f9fa; 
-    --accent-color: #343a40; 
-    --link-color: #007bff; 
+    --primary-bg: #ffffff; /* ڕەنگێ سپی سەرەکی */
+    --secondary-bg: #f8f9fa; /* ڕەنگێ زەردێکی سووک */
+    --accent-color: #343a40; /* ڕەنگێ ڕەش بۆ دەق و گرنگی */
+    --link-color: #007bff; /* شین بۆ لینکەکان */
     --text-color: #495057;
     --border-color: #e9ecef;
 }
 
 body {
-    /* تەنها فۆنتی NRTKurdish بەکاربهێنە بۆ دڵنیابوون لە گۆڕانکاری */
-    font-family: 'NRTKurdish', sans-serif; 
+    /* بکارئینانا فۆنتێ گونجاوێ کوردی (Ruwudu) */
+    font-family: 'Ruwudu', Tahoma, sans-serif; 
     background-color: var(--secondary-bg);
     color: var(--text-color);
     line-height: 1.8;
@@ -34,8 +25,6 @@ body {
     direction: rtl; 
     text-align: right;
 }
-
-/* ئیتر بەشەکانی تری CSS کە پێشتر گۆڕاومانە... */
 
 /* Header و Navigation */
 header {
@@ -94,4 +83,209 @@ nav ul li a:hover {
     gap: 50px;
 }
 
-.
+.hero-content h4 {
+    color: var(--link-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin: 0 0 20px;
+    color: var(--accent-color);
+}
+
+.hero-content h1::before {
+    content: "دکتۆر AI | "; 
+    color: var(--link-color); 
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid var(--link-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* تەکمە (Button) */
+.btn {
+    display: inline-block;
+    background: var(--link-color);
+    color: var(--primary-bg);
+    padding: 12px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3; 
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    background: none;
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-small:hover {
+    background: var(--link-color);
+    color: var(--primary-bg);
+}
+
+/* بەشێن سەرەکی (Sections) */
+section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--primary-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px 0;
+    margin-bottom: 40px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.section-title {
+    color: var(--accent-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+/* بەشێ شیانان (Services/Skills) - وەک کارد */
+.services-section {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--link-color);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+    font-size: 2em;
+    color: var(--link-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-color);
+}
+
+/* بەشێن کار و پرۆژە */
+.job-item {
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--link-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.job-item h3 {
+    color: var(--link-color);
+    margin-top: 0;
+}
+
+/* تابلۆی پەیوەندی */
+#contact table {
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#contact table th, #contact table td {
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--accent-color);
+    color: var(--secondary-bg);
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .hero-section, .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 50px;
+    }
+    .hero-image, .about-image {
+        margin-top: 30px;
+        order: -1;
+    }
+    nav ul {
+        display: none; 
+    }
+    header {
+        padding: 15px 20px;
+    }
+    #contact table {
+        width: 100%;
+    }
+}
